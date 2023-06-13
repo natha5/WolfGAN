@@ -8,3 +8,4 @@
 - [Map format](https://moddingwiki.shikadi.net/wiki/GameMaps_Format) - Explains format of id games file formats
 - [Wolfenpack](https://wolf3d.darkbb.com/t2364-wolfenpack-v3-2-released) - Wolf3D map editing program
 - [Wolf3D forum](https://wolf3d.darkbb.com/forum) - likely a good source of maps for dataset
+- [Wolf3D source code](https://github.com/id-Software/wolf3d) - thank you id
