@@ -1,0 +1,155 @@
+; WMAP object data
+; ================
+;
+; Format:
+;   code (4HEX), space (' '), characters (2ASCII), space (' '), comments...
+;
+0000    Nothing
+0013 ÝÞ Start position (E)
+0014 ÝÞ Start position (N)
+0015 ÝÞ Start position (S)
+0016 ÝÞ Start position (W)
+0017  ù Water
+0018  o Oil drum
+0019  o Table w/chairs
+001A  o Floor lamp
+001B  ù Chandalier
+001C  o Hanging skeleton
+001D  f Dog food
+001E  o Column
+001F  o Plant
+0020  o Skeleton
+0021  o Sink
+0022  o Plant in vase
+0023  o Large vase
+0024  o Table
+0025  ù Ceiling light
+0026  ù Hanging kitchen utensils
+0027  o Armour
+0028  o Empty cage
+0029  o Cage w/skeleton
+002A  o Bones
+002B gk Gold key
+002C sk Silver key
+002D  o Bed
+002E  o Bin (can walk through)
+002F  f Food
+0030  + First aid kit
+0031  a Ammo
+0032  m Machine gun (3)
+0033  g Chain gun (4)
+0034  t Cross
+0035  t Chalace
+0036  t Jewels
+0037  t Crown
+0038  s Sphere
+0039  ù Bones in blood
+003A  o Barrel
+003B  o Well w/water
+003C  o Well wo/water
+003D  ù Pool of blood
+003E  o Flag
+0040  ù Crushed bones
+0041  ù Crushed bones
+0042  ù Crushed bones
+0043  ù Hanging pans
+0044  o Stove
+0045  o Spears
+0046  ÷ Green vine
+0049    ? - invisible object
+005A    Movement turning point
+005B    Movement turning point
+005C    Movement turning point
+005D    Movement turning point
+005E    Movement turning point
+005F    Movement turning point
+0060    Movement turning point
+0061    Movement turning point
+0062  ¨ Secret door
+0063    End game trigger
+006C B1 Brown guard (standing-E)
+006D B1 Brown guard (standing-N)
+006F B1 Brown guard (standing-W)
+006E B1 Brown guard (standing-S)
+0070 B1 Brown guard (moving-E)
+0071 B1 Brown guard (moving-N)
+0072 B1 Brown guard (moving-W)
+0073 B1 Brown guard (moving-S)
+0074 W1 White guard (standing-E)
+0075 W1 White guard (standing-N)
+0076 W1 White guard (standing-W)
+0077 W1 White guard (standing-S)
+007C  ù Dead guard
+007E S1 SS officer (standing-E)
+007F S1 SS officer (standing-N)
+0080 S1 SS officer (standing-W)
+0081 S1 SS officer (standing-S)
+0082 S1 SS officer (moving-E)
+0083 S1 SS officer (moving-N)
+0084 S1 SS officer (moving-W)
+0085 S1 SS officer (moving-S)
+008A D1 Dog
+008B D1 Dog
+008C D1 Dog
+008D D1 Dog
+0090 B3 Brown guard (standing-E)
+0091 B3 Brown guard (standing-N)
+0092 B3 Brown guard (standing-W)
+0093 B3 Brown guard (standing-S)
+0094 B3 Brown guard (moving-E)
+0095 B3 Brown guard (moving-N)
+0096 B3 Brown guard (moving-W)
+0097 B3 Brown guard (moving-S)
+0098 W3 White guard (standing-E)
+00A0  p Black priest
+00A2 S3 SS officer (standing-E)
+00A3 S3 SS officer (standing-N)
+00A4 S3 SS officer (standing-W)
+00A5 S3 SS officer (standing-S)
+00A6 S3 SS officer (moving-E)
+00A7 S3 SS officer (moving-N)
+00A8 S3 SS officer (moving-W)
+00A9 S3 SS officer (moving-S)
+00AE D3 Dog
+00AF D3 Dog
+00B0 D3 Dog
+00B1 D3 Dog
+00B2  h Hiltler
+00B4 B4 Brown guard (standing-E)
+00B5 B4 Brown guard (standing-N)
+00B6 B4 Brown guard (standing-W)
+00B7 B4 Brown guard (standing-S)
+00B8 B4 Brown guard (moving-E)
+00B9 B4 Brown guard (moving-N)
+00BA B4 Brown guard (moving-W)
+00BB B4 Brown guard (moving-S)
+00BC W4 White guard (standing-E)
+00BD W4 White guard (standing-N)
+00BE W4 White guard (standing-W)
+00BF W4 White guard (standing-S)
+00C4  d Dr. Schabbs
+00C6 S4 SS officer (standing-E)
+00C7 S4 SS officer (standing-N)
+00C8 S4 SS officer (standing-W)
+00C9 S4 SS officer (standing-S)
+00CA S4 SS officer (moving-E)
+00CB S4 SS officer (moving-N)
+00CC S4 SS officer (moving-W)
+00CD S4 SS officer (moving-S)
+00D2 D4 Dog
+00D3 D4 Dog
+00D4 D4 Dog
+00D5 D4 Dog
+00D6  x Hulk
+00D8 Z1 Zombie (standing-E)
+00D9 Z1 Zombie (standing-N)
+00DA Z1 Zombie (standing-W)
+00DB Z1 Zombie (standing-S)
+00EA Z3 Zombie (standing-E)
+00EB Z3 Zombie (standing-N)
+00EC Z3 Zombie (standing-W)
+00ED Z3 Zombie (standing-S)
+00FC Z4 Zombie (standing-E)
+00FD Z4 Zombie (standing-N)
+00FE Z4 Zombie (standing-W)
+00FF Z4 Zombie (standing-S)

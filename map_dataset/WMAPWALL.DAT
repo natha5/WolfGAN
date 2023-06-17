@@ -1,0 +1,101 @@
+; WMAP wall data
+; ==============
+;
+; Format:
+;   code (4HEX), space (' '), characters (2ASCII), space (' '), comments...
+;
+0001 ±± Grey wall
+0002 ±± Grey wall
+0003 ²² Grey wall w/banner
+0004 ²² Grey wall w/Hitler
+0005 ×× Cell
+0006 ²² Grey wall w/eagle
+0007 ×× Cell w/skeleton
+0008 ±± Blue wall
+0009 ±± Blue wall
+000A ²² Wood w/eagle
+000B ²² Wood w/Hitler
+000C ±± Wood wall
+000D ## Entrance to level
+000E ²² Steel plate w/sign
+000F ²² Steel plate
+0010 °° Landscape view
+0011 ±± Red brick wall
+0012 ²² Red wall w/wreath
+0013 ±± Purple wall
+0014 ²² Red wall w/shield
+0015 ÛÛ Elevator (switch down)
+0016 ÛÛ Elevator (switch up)
+0017 ²² Purple wall w/iron cross
+0018 ±± Wall with yellow slime
+0019 ²² Purple wall w/blood
+001A ±± Wall with not so much yellow slime
+001B ±± Grey wall 3
+001C ²² Grey wall w/sign
+001D ±± Brown cave
+001E ²² Brown cave w/blood
+001F ²² Brown cave w/blood
+0020 ²² Brown cave w/blood
+0021 ²² Stained glass window of Hitler
+0022 ±± Blue brick wall w/skulls
+0023 ±± Grey brick wall
+0024 ±± Blue brick wall w/swastikas
+0025 ±± Grey brick wall w/hole
+0026 ±± Red/grey/brown wall
+0027 ±± Grey brick wall w/crack
+0028 ±± Blue brick wall
+0029 ²² Blue stone wall w/verboten sign
+002A ±± Brown tiles
+002B ²² Grey brick wall w/map
+002C ±± Orange stone wall
+002D ±± Orange stone wall
+002E ±± Brown tiles
+002F ²² Brown tiles w/banner
+0030 ²² Orange panel on wood wall
+0031 ²² Grey brick wall w/Hitler
+005A º  Vert. door
+005B ÍÍ Horiz. door
+005C ðð Locked door (gold key)
+005D ðð Locked door (gold key)
+005E ðð Vert. locked grey steel door (silver key)
+005F ðð Horiz. locked grey steel door (silver key)
+0064 ï  Elevator entrance
+0065 ÍÍ False elevator entrance
+006A    Floor
+006B    Floor
+006C    Floor
+006D    Floor
+006E    Floor
+006F    Floor
+0070    Floor
+0071    Floor
+0072    Floor
+0073    Floor
+0074    Floor
+0075    Floor
+0076    Floor
+0077    Floor
+0078    Floor
+0079    Floor
+007A    Floor
+007B    Floor
+007C    Floor
+007D    Floor
+007E    Floor
+007F    Floor
+0080    Floor
+0081    Floor
+0082    Floor
+0083    Floor
+0084    Floor
+0085    Floor
+0086    Floor
+0087    Floor
+0088    Floor
+0089    Floor
+008A    Floor
+008B    Floor
+008C    Floor
+008D    Floor
+008E    Floor
+008F    Floor
