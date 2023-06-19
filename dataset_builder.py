@@ -2,13 +2,13 @@ import numpy as np
 import pandas as pd
 
 
-def read_into_array():
+def read_into_array(file_path):
 
     maze_array = [["0"] * 64 for _ in range(64)]  # Initialize a 64x64 array with zeros
     object_array = [["0"] * 64 for _ in range(64)]
 
 
-    with open(r"map_dataset\base_game\LEVEL01.HEX", 'r') as file:
+    with open(file_path, 'r') as file:
 
         for _ in range(5): # skip first 5 lines
             file.readline()
@@ -32,3 +32,17 @@ def read_into_array():
 
     return(maze_array,object_array)
 
+df = pd.DataFrame()
+
+map_list = []
+
+for i in range(1,60):
+    
+    if i < 10:
+        current_path = r"map_dataset\base_game\LEVEL0" + str(i) +".HEX"
+    else:
+        current_path = r"map_dataset\base_game\LEVEL" + str(i) +".HEX"
+
+    map_list.append(read_into_array(current_path))
+
+df = df.append(map_list)
