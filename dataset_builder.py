@@ -32,17 +32,57 @@ def read_into_array(file_path):
 
     return(maze_array,object_array)
 
+
+def determine_path(base_path):
+    wall_list = []
+    objects_list = []
+
+    for i in range(1,60):
+        if i < 10:
+            current_path = base_path + r"\LEVEL0" + str(i) +".HEX"
+        else:
+            current_path = base_path + r"\LEVEL" + str(i) +".HEX"
+        
+        walls, objects = read_into_array(current_path)
+        wall_list.append(walls)
+        objects_list.append(objects)
+    
+    return (wall_list, objects_list)
+        
+
 df = pd.DataFrame()
 
-map_list = []
+full_walls_list = []
+full_objects_list = []
 
-for i in range(1,60):
-    
-    if i < 10:
-        current_path = r"map_dataset\base_game\LEVEL0" + str(i) +".HEX"
-    else:
-        current_path = r"map_dataset\base_game\LEVEL" + str(i) +".HEX"
+walls, objects = determine_path(r"map_dataset\10newones")
 
-    map_list.append(read_into_array(current_path))
+full_walls_list.append(walls)
+full_objects_list.append(objects)
 
-df = df.append(map_list)
+walls, objects = determine_path(r"map_dataset\base_game")
+
+full_walls_list.append(walls)
+full_objects_list.append(objects)
+
+walls, objects = determine_path(r"map_dataset\DHWTCSDL")
+
+full_walls_list.append(walls)
+full_objects_list.append(objects)
+
+walls, objects = determine_path(r"map_dataset\Ipank")
+
+full_walls_list.append(walls)
+full_objects_list.append(objects)
+
+walls, objects = determine_path(r"map_dataset\spear_v2.0")
+
+full_walls_list.append(walls)
+full_objects_list.append(objects)
+
+walls, objects = determine_path(r"map_dataset\W3D-CMP")
+
+full_walls_list.append(walls)
+full_objects_list.append(objects)
+
+print(full_walls_list)
