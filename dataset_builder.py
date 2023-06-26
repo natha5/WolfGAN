@@ -50,7 +50,7 @@ def determine_path(base_path):
     return (wall_list, objects_list)
         
 
-df = pd.DataFrame()
+
 
 full_walls_list = []
 full_objects_list = []
@@ -85,4 +85,17 @@ walls, objects = determine_path(r"map_dataset\W3D-CMP")
 full_walls_list.append(walls)
 full_objects_list.append(objects)
 
-print(full_walls_list)
+full_walls_array = np.array(full_walls_list)
+full_objects_array = np.array(full_objects_list)
+
+print(full_walls_array.shape)
+
+full_walls_array = np.reshape(full_walls_array,((59*6), (64*64)))
+full_objects_array = np.reshape(full_objects_array,((59*6), (64*64)))
+
+
+df = pd.DataFrame(full_walls_array)
+
+df = pd.concat([df, pd.DataFrame(full_objects_array)], axis=1)
+
+print(df)
