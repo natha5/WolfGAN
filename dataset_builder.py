@@ -52,6 +52,7 @@ def determine_path(base_path):
 
 
 
+
 full_walls_list = []
 full_objects_list = []
 
@@ -98,4 +99,20 @@ df = pd.DataFrame(full_walls_array)
 
 df = pd.concat([df, pd.DataFrame(full_objects_array)], axis=1)
 
+# create column names
+
+column_names = []
+
+for i in range(64*64):
+    column_names.append("w"+ str(i+1))
+
+for i in range(64*64):
+    column_names.append("o" + str(i+1))
+
+
+df.columns = column_names
+
 print(df)
+
+
+
