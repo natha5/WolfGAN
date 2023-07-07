@@ -105,7 +105,7 @@ full_walls_array = np.array(full_walls_list)
 print(full_walls_array.shape)
 
 
-with open('dataset.csv', 'w') as f:
+with open('dataset.csv', 'w', newline='') as f:
     writer = csv.writer(f)
 
     for i in range(59):
