@@ -39,7 +39,7 @@ def determine_path(base_path):
     wall_list = []
     #objects_list = []
 
-    for i in range(1,60):
+    for i in range(1,61):
         if i < 10:
             current_path = base_path + r"\LEVEL0" + str(i) +".HEX"
         else:
@@ -108,7 +108,7 @@ print(full_walls_array.shape)
 with open('dataset.csv', 'w', newline='') as f:
     writer = csv.writer(f)
 
-    for i in range(59):
+    for i in range(60):
         for j in range(64):
 
             writer.writerow(full_walls_array[0][i][j])
