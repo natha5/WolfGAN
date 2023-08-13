@@ -41,9 +41,9 @@ def determine_path(base_path):
 
     for i in range(1,61):
         if i < 10:
-            current_path = base_path + r"\LEVEL0" + str(i) +".HEX"
+            current_path = base_path + r"/LEVEL0" + str(i) +".HEX"
         else:
-            current_path = base_path + r"\LEVEL" + str(i) +".HEX"
+            current_path = base_path + r"/LEVEL" + str(i) +".HEX"
         
         print("Map #" + str(i))
 
@@ -64,17 +64,17 @@ def hex_string_to_int(value):
 full_walls_list = []
 #full_objects_list = []
 
-"""
-walls, objects = determine_path(r"map_dataset\10newones")
 
-full_walls_list.append(walls)
-full_objects_list.append(objects)
-"""
-
-walls = determine_path(r"map_dataset\base_game")
+walls = determine_path(r"map_dataset/base_game")
 
 full_walls_list.append(walls)
 # full_objects_list.append(objects)
+
+walls = determine_path(r"map_dataset/Ipank")
+
+full_walls_list.append(walls)
+#full_objects_list.append(objects)
+
 
 """
 walls, objects = determine_path(r"map_dataset\DHWTCSDL")
@@ -102,13 +102,9 @@ full_objects_list.append(objects)
 full_walls_array = np.array(full_walls_list)
 # full_objects_array = np.array(full_objects_list)
 
+full_walls_array = full_walls_array.reshape(7680,64)
+
 print(full_walls_array.shape)
 
 
-with open('dataset.csv', 'w', newline='') as f:
-    writer = csv.writer(f)
-
-    for i in range(60):
-        for j in range(64):
-
-            writer.writerow(full_walls_array[0][i][j])
+np.savetxt('dataset.csv', full_walls_array, delimiter=',', fmt='%i')
