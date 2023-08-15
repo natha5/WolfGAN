@@ -66,27 +66,26 @@ full_walls_list.append(walls)
 #full_objects_list.append(objects)
 
 
-"""
-walls, objects = determine_path(r"map_dataset\DHWTCSDL")
+
+walls = determine_path(r"map_dataset/DHWTCSDL", 30)
 
 full_walls_list.append(walls)
-full_objects_list.append(objects)
+#full_objects_list.append(objects)
 
-walls, objects = determine_path(r"map_dataset\Ipank")
 
-full_walls_list.append(walls)
-full_objects_list.append(objects)
 
-walls, objects = determine_path(r"map_dataset\spear_v2.0")
+walls = determine_path(r"map_dataset/spear_v2.0", 30)
 
 full_walls_list.append(walls)
-full_objects_list.append(objects)
 
-walls, objects = determine_path(r"map_dataset\W3D-CMP")
+
+walls= determine_path(r"map_dataset/W3D-CMP", 60)
 
 full_walls_list.append(walls)
-full_objects_list.append(objects)
-"""
+
+walls= determine_path(r"map_dataset/10newones", 10)
+full_walls_list.append(walls)
+
 
 
 full_walls_array = np.array(full_walls_list)
