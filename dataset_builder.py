@@ -51,47 +51,47 @@ def hex_string_to_int(value):
 
 
 
-full_walls_list = []
-#full_objects_list = []
+
 
 
 walls = determine_path(r"map_dataset/base_game", 60)
 
-full_walls_list.append(walls)
+full_walls_array = np.array(walls)
 # full_objects_list.append(objects)
 
 walls = determine_path(r"map_dataset/Ipank" , 60)
 
-full_walls_list.append(walls)
+full_walls_array = np.append(full_walls_array, walls)
 #full_objects_list.append(objects)
 
 
 
 walls = determine_path(r"map_dataset/DHWTCSDL", 30)
 
-full_walls_list.append(walls)
+full_walls_array = np.append(full_walls_array, walls)
 #full_objects_list.append(objects)
 
 
 
-walls = determine_path(r"map_dataset/spear_v2.0", 30)
-
-full_walls_list.append(walls)
+walls = determine_path(r"map_dataset/spear_v2.0", 29)
+full_walls_array = np.append(full_walls_array, walls)
 
 
 walls= determine_path(r"map_dataset/W3D-CMP", 60)
+full_walls_array = np.append(full_walls_array, walls)
 
-full_walls_list.append(walls)
-
-walls= determine_path(r"map_dataset/10newones", 10)
-full_walls_list.append(walls)
-
+walls = determine_path(r"map_dataset/10newones", 10)
+full_walls_array = np.append(full_walls_array, walls)
 
 
-full_walls_array = np.array(full_walls_list)
+
+
+#full_walls_array = np.array(full_walls_list)
 # full_objects_array = np.array(full_objects_list)
 
-full_walls_array = full_walls_array.reshape(7680,64)
+print(full_walls_array.shape)
+
+full_walls_array = full_walls_array.reshape(15936,64)
 
 print(full_walls_array.shape)
 
