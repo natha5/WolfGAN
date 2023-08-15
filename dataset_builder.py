@@ -83,7 +83,8 @@ full_walls_array = np.append(full_walls_array, walls)
 walls = determine_path(r"map_dataset/10newones", 10)
 full_walls_array = np.append(full_walls_array, walls)
 
-
+walls = determine_path(r"map_dataset/Fox_v1.0", 43)
+full_walls_array = np.append(full_walls_array, walls)
 
 
 #full_walls_array = np.array(full_walls_list)
@@ -91,7 +92,7 @@ full_walls_array = np.append(full_walls_array, walls)
 
 print(full_walls_array.shape)
 
-full_walls_array = full_walls_array.reshape(15936,64)
+full_walls_array = full_walls_array.reshape(18688,64)
 
 print(full_walls_array.shape)
 
