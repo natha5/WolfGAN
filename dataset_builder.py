@@ -21,25 +21,15 @@ def read_into_array(file_path):
                 maze_array[i][j] = hex_string_to_int(str(value))
             file.readline()  # Skip the remaining characters in the line (if any)
 
-        """
-        for _ in range(3): # skip 3 more lines
-            file.readline()
 
-        for i in range(64):
-            line = file.read(128)  # Read 128 characters (64 values) at a time
-            for j in range(64):
-                value = line[j*2 : j*2+2]  # Extract the 2-character value
-                object_array[i][j] = str(value)
-            file.readline()  # Skip the remaining characters in the line (if any)
-        """
     return(maze_array)
 
 
-def determine_path(base_path):
+def determine_path(base_path, dataset_size):
     wall_list = []
     #objects_list = []
 
-    for i in range(1,61):
+    for i in range(1,dataset_size + 1):
         if i < 10:
             current_path = base_path + r"/LEVEL0" + str(i) +".HEX"
         else:
@@ -65,12 +55,12 @@ full_walls_list = []
 #full_objects_list = []
 
 
-walls = determine_path(r"map_dataset/base_game")
+walls = determine_path(r"map_dataset/base_game", 60)
 
 full_walls_list.append(walls)
 # full_objects_list.append(objects)
 
-walls = determine_path(r"map_dataset/Ipank")
+walls = determine_path(r"map_dataset/Ipank" , 60)
 
 full_walls_list.append(walls)
 #full_objects_list.append(objects)
