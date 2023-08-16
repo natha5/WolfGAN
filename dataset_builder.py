@@ -58,56 +58,62 @@ def hex_string_to_int(value):
 
 
 
-
-
-
+walls = determine_path(r"map_dataset/10newones", 10)
+full_walls_array = np.array(walls)
 
 walls = determine_path(r"map_dataset/base_game", 60)
-
-full_walls_array = np.array(walls)
-# full_objects_list.append(objects)
-
-walls = determine_path(r"map_dataset/Ipank" , 60)
-
 full_walls_array = np.append(full_walls_array, walls)
-#full_objects_list.append(objects)
 
+walls = determine_path(r"map_dataset/beltran", 60)
+full_walls_array = np.append(full_walls_array, walls)
 
+walls = determine_path(r"map_dataset/bunker", 60)
+full_walls_array = np.append(full_walls_array, walls)
+
+walls = determine_path(r"map_dataset/clonewar", 60)
+full_walls_array = np.append(full_walls_array, walls)
 
 walls = determine_path(r"map_dataset/DHWTCSDL", 30)
-
-full_walls_array = np.append(full_walls_array, walls)
-#full_objects_list.append(objects)
-
-
-
-walls = determine_path(r"map_dataset/spear_v2.0", 29)
-full_walls_array = np.append(full_walls_array, walls)
-
-
-walls= determine_path(r"map_dataset/W3D-CMP", 60)
-full_walls_array = np.append(full_walls_array, walls)
-
-walls = determine_path(r"map_dataset/10newones", 10)
 full_walls_array = np.append(full_walls_array, walls)
 
 walls = determine_path(r"map_dataset/Fox_v1.0", 43)
 full_walls_array = np.append(full_walls_array, walls)
 
+walls = determine_path(r"map_dataset/Ipank" , 60)
+full_walls_array = np.append(full_walls_array, walls)
+
+walls = determine_path(r"map_dataset/last_waltz" , 60)
+full_walls_array = np.append(full_walls_array, walls)
+
+walls = determine_path(r"map_dataset/NACW3D" , 60)
+full_walls_array = np.append(full_walls_array, walls)
+
 walls = determine_path(r"map_dataset/ragnarok", 60)
 full_walls_array = np.append(full_walls_array, walls)
 
+walls = determine_path(r"map_dataset/spear_v2.0", 29)
+full_walls_array = np.append(full_walls_array, walls)
 
-#full_walls_array = np.array(full_walls_list)
-# full_objects_array = np.array(full_objects_list)
+walls= determine_path(r"map_dataset/W3D-CMP", 60)
+full_walls_array = np.append(full_walls_array, walls)
+
+walls = determine_path(r"map_dataset/wlfbel_2", 60)
+full_walls_array = np.append(full_walls_array, walls)
+
+walls = determine_path(r"map_dataset/wlfbel_3", 60)
+full_walls_array = np.append(full_walls_array, walls)
+
+
+
 
 print(full_walls_array.shape)
 
-no_of_maps = int(full_walls_array.shape[0] / 64)
+no_of_lines = int(full_walls_array.shape[0] / 64)
+no_of_maps = int(no_of_lines / 64)
 
 print("No of maps=" + str(no_of_maps))
 
-full_walls_array = full_walls_array.reshape(no_of_maps,64)
+full_walls_array = full_walls_array.reshape(no_of_lines,64)
 
 print(full_walls_array.shape)
 
