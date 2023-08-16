@@ -8,3 +8,5 @@
 - [spear v2.0](http://www.wolfenstein3d.co.uk/awards.htm)
 - [Fox v1.0](http://www.wolfenstein3d.co.uk/awards.htm)
 - [ragnarok](http://www.wolfenstein3d.co.uk/awards.htm)
+- [wlfbel_2](http://www.wolfenstein3d.co.uk/adds_brian.htm)
+= [wlfbel_3](http://www.wolfenstein3d.co.uk/adds_brian.htm)
