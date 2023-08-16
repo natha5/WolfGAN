@@ -97,17 +97,24 @@ full_walls_array = np.append(full_walls_array, walls)
 walls = determine_path(r"map_dataset/ragnarok", 60)
 full_walls_array = np.append(full_walls_array, walls)
 
+walls = determine_path(r"map_dataset/wlfbel_2", 60)
+full_walls_array = np.append(full_walls_array, walls)
+
+walls = determine_path(r"map_dataset/wlfbel_3", 60)
+full_walls_array = np.append(full_walls_array, walls)
+
 
 #full_walls_array = np.array(full_walls_list)
 # full_objects_array = np.array(full_objects_list)
 
 print(full_walls_array.shape)
 
-no_of_maps = int(full_walls_array.shape[0] / 64)
+no_of_lines = int(full_walls_array.shape[0] / 64)
+no_of_maps = int(no_of_lines / 64)
 
 print("No of maps=" + str(no_of_maps))
 
-full_walls_array = full_walls_array.reshape(no_of_maps,64)
+full_walls_array = full_walls_array.reshape(no_of_lines,64)
 
 print(full_walls_array.shape)
 
