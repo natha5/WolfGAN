@@ -8,21 +8,25 @@ def read_into_array(file_path):
     maze_array = [[0] * 64 for _ in range(64)]  # Initialize a 64x64 array with zeros
     #object_array = [["0"] * 64 for _ in range(64)]
 
+    try:
+        with open(file_path, 'r') as file:
 
-    with open(file_path, 'r') as file:
+            for _ in range(5): # skip first 5 lines
+                file.readline()
 
-        for _ in range(5): # skip first 5 lines
-            file.readline()
+            for i in range(64):
+                line = file.read(128)  # Read 128 characters (64 values) at a time
+                for j in range(64):
+                    value = line[j*2 : j*2+2]  # Extract the 2-character value
+                    maze_array[i][j] = hex_string_to_int(str(value))
+                file.readline()  # Skip the remaining characters in the line (if any)
+        return(maze_array)        
+    except IOError:
+        print("file does not exist, skipping")
+        return 0
 
-        for i in range(64):
-            line = file.read(128)  # Read 128 characters (64 values) at a time
-            for j in range(64):
-                value = line[j*2 : j*2+2]  # Extract the 2-character value
-                maze_array[i][j] = hex_string_to_int(str(value))
-            file.readline()  # Skip the remaining characters in the line (if any)
 
-
-    return(maze_array)
+    
 
 
 def determine_path(base_path, dataset_size):
@@ -38,7 +42,11 @@ def determine_path(base_path, dataset_size):
         print("Map #" + str(i))
 
         walls = read_into_array(current_path)
-        wall_list.append(walls)
+
+        if walls == 0:
+            print("going to next map")
+        else:
+            wall_list.append(walls)
         #objects_list.append(objects)
     
     return (wall_list)
@@ -86,13 +94,20 @@ full_walls_array = np.append(full_walls_array, walls)
 walls = determine_path(r"map_dataset/Fox_v1.0", 43)
 full_walls_array = np.append(full_walls_array, walls)
 
+walls = determine_path(r"map_dataset/ragnarok", 60)
+full_walls_array = np.append(full_walls_array, walls)
+
 
 #full_walls_array = np.array(full_walls_list)
 # full_objects_array = np.array(full_objects_list)
 
 print(full_walls_array.shape)
 
-full_walls_array = full_walls_array.reshape(18688,64)
+no_of_maps = int(full_walls_array.shape[0] / 64)
+
+print("No of maps=" + str(no_of_maps))
+
+full_walls_array = full_walls_array.reshape(no_of_maps,64)
 
 print(full_walls_array.shape)
 

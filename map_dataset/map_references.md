@@ -7,3 +7,4 @@
 - [Ipank](http://www.wolfenstein3d.co.uk/awards.htm)
 - [spear v2.0](http://www.wolfenstein3d.co.uk/awards.htm)
 - [Fox v1.0](http://www.wolfenstein3d.co.uk/awards.htm)
+- [ragnarok](http://www.wolfenstein3d.co.uk/awards.htm)
